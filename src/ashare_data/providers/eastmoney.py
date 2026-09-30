@@ -3,8 +3,8 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-from .http import UA, RateLimitedSession
-from .symbols import parse_symbol
+from ..core.http import UA, RateLimitedSession
+from ..core.symbols import parse_symbol
 
 
 class EastmoneyProvider:

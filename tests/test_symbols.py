@@ -1,6 +1,6 @@
 import pytest
 
-from ashare_data.symbols import parse_symbol
+from ashare_data.core.symbols import parse_symbol
 
 
 def test_symbol_routes():
@@ -15,4 +15,3 @@ def test_symbol_routes():
 def test_conflicting_market_rejected():
     with pytest.raises(ValueError):
         parse_symbol("sz600519")
-

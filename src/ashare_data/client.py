@@ -1,16 +1,16 @@
 from __future__ import annotations
 
-from .baostock_provider import BaoStockProvider
-from .cninfo import CninfoProvider
-from .eastmoney import EastmoneyProvider
-from .nbs import NbsProvider
-from .official import HKEXOfficialProvider, SSEOfficialProvider
-from .sina import SinaProvider
-from .tencent import TencentProvider
+from .providers.baostock import BaoStockProvider
+from .providers.cninfo import CninfoProvider
+from .providers.eastmoney import EastmoneyProvider
+from .providers.nbs import NbsProvider
+from .providers.official import HKEXOfficialProvider, SSEOfficialProvider
+from .providers.sina import SinaProvider
+from .providers.tencent import TencentProvider
 
 
 class AShareData:
-    """Facade for non-tick A-share research data."""
+    """Facade for A-share research data."""
 
     def __init__(self, eastmoney_min_interval: float = 2.0) -> None:
         self.tencent = TencentProvider()

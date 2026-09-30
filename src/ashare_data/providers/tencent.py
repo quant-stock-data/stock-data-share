@@ -5,8 +5,8 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
-from .http import UA, make_session
-from .symbols import parse_symbol
+from ..core.http import UA, make_session
+from ..core.symbols import parse_symbol
 
 CN_TZ = timezone(timedelta(hours=8))
 

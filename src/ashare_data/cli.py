@@ -11,7 +11,7 @@ def _dump(value) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(prog="ashare-data", description="Non-tick A-share public data toolkit")
+    parser = argparse.ArgumentParser(prog="ashare-data", description="A-share public data toolkit")
     sub = parser.add_subparsers(dest="command", required=True)
 
     p = sub.add_parser("quote")
@@ -53,4 +53,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

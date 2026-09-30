@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 
 import requests
 
-from .http import make_session
+from ..core.http import make_session
 
 
 class NbsProvider:
@@ -51,4 +51,3 @@ class NbsProvider:
         if missing:
             raise RuntimeError(f"NBS PMI article format changed; missing fields: {missing}")
         return out
-

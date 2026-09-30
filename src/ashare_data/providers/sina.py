@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import requests
 
-from .http import make_session
-from .symbols import parse_symbol
+from ..core.http import make_session
+from ..core.symbols import parse_symbol
 
 
 class SinaProvider:
@@ -43,4 +43,3 @@ class SinaProvider:
                     record[f"{title}_yoy"] = yoy
             out.append(record)
         return out
-

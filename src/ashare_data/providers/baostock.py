@@ -5,7 +5,7 @@ from contextlib import contextmanager
 
 import pandas as pd
 
-from .symbols import parse_symbol
+from ..core.symbols import parse_symbol
 
 
 def _bs():

@@ -7,4 +7,3 @@ informed in part by Simon Lin's a-stock-data project (Apache-2.0):
 https://github.com/simonlin1212/a-stock-data
 
 The code structure and implementation in this repository are intentionally new.
-No tick-by-tick / transaction module is included.
