@@ -221,6 +221,18 @@ The live smoke suite reaches real external data sources and is intended for manu
 - CSI index constituent-change events
 - Unified result models, caching, and local persistence
 
+## Contact
+
+<p align="center">
+  <img src="./assets/wechat-qrcode.png" width="260" alt="WeChat QR code">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/qq-qrcode.png" width="260" alt="QQ QR code">
+</p>
+
+<p align="center"><b>WeChat · QQ</b></p>
+
+---
+
 ## Acknowledgements
 
 Public-interface research was informed in part by Simon Lin's [a-stock-data](https://github.com/simonlin1212/a-stock-data). This repository uses an independent code structure and implementation. See [NOTICE](./NOTICE) for details.
