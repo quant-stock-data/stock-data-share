@@ -1,13 +1,13 @@
-"""Live smoke checks. Run manually: python tests/smoke_live.py.
+"""Live smoke checks. Run manually with: python tests/smoke_live.py.
 
-Each upstream is checked independently. One blocked/changed provider should not hide
+Each upstream is checked independently so one provider failure does not hide
 the status of the remaining providers.
 """
 
 from ashare_data import AShareData
 
 
-def main():
+def main() -> None:
     api = AShareData(eastmoney_min_interval=2.0)
     checks: dict[str, dict] = {}
 
@@ -15,7 +15,7 @@ def main():
         try:
             ok = bool(fn())
             checks[name] = {"ok": ok, "error": None if ok else "returned empty/false"}
-        except Exception as exc:  # noqa: BLE001 - live diagnostics must isolate upstream failures
+        except Exception as exc:  # noqa: BLE001 - live diagnostics isolate upstream failures
             checks[name] = {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
     check("tencent_quote", lambda: api.quote("600519").get("name"))
@@ -37,6 +37,7 @@ def main():
         lambda: not api.baostock.valuation_history("600519", "2026-09-01", "2026-09-29").empty,
     )
     check("nbs_pmi", lambda: api.nbs.pmi().get("manufacturing_pmi") is not None)
+
     def pcf_is_valid():
         pcf = api.sse.etf_pcf("510180")
         return pcf.get("record_number", 0) == len(pcf.get("components") or []) > 0
