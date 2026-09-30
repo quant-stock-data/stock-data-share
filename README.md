@@ -290,6 +290,18 @@ python tests/smoke_live.py
 
 ---
 
+## 联系方式
+
+<p align="center">
+  <img src="./assets/wechat-qrcode.png" width="260" alt="微信二维码">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/qq-qrcode.png" width="260" alt="QQ二维码">
+</p>
+
+<p align="center"><b>微信 · QQ</b></p>
+
+---
+
 ## 致谢
 
 项目在公开接口调研阶段参考过 Simon Lin 的 [a-stock-data](https://github.com/simonlin1212/a-stock-data) 项目。当前仓库使用独立代码结构与实现，相关说明见 [NOTICE](./NOTICE)。
