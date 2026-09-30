@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stock-data-share"
+version = "0.1.0"
+description = "A-share research data toolkit focused on non-tick, traceable public data sources."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "quant-stock-data"}]
+dependencies = [
+  "requests>=2.31",
+  "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+history = ["baostock>=0.8.9"]
+excel = ["openpyxl>=3.1", "xlrd>=2.0"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+ashare-data = "ashare_data.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
